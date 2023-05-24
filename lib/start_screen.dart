@@ -1,44 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'package:music_gen_app/main_drawer.dart';
 //import 'package:music_gen_app/main.dart';
 
 class StartScreen extends StatelessWidget {
-  StartScreen(this.startMusic, {super.key});
+  StartScreen({super.key});
 
-  final void Function() startMusic;
+  //final void Function() startMusic;
 
   var musicimg = 'assets/images/musicapp2.png';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Welcome! Get ready to explore the world of music!'),
+        title: Text('HomePage'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(musicimg, width: 200),
-            const SizedBox(height: 80),
-            const Text(
-              'Explore Music The Fun Way!',
-              style: TextStyle(
-                color: Color.fromARGB(255, 47, 14, 183),
-                fontSize: 24,
-              ),
+      drawer: const MainDrawer(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SizedBox(
+            height: 200,
+            child: Lottie.asset(
+              'assets/images/Homescreen-ani.json',
+              width: 500,
+              height: 500,
             ),
-            const SizedBox(height: 30),
-            OutlinedButton.icon(
-              onPressed: () {
-                startMusic();
-              },
-              style: OutlinedButton.styleFrom(
-                foregroundColor: const Color.fromARGB(255, 47, 14, 183),
-              ),
-              icon: const Icon(Icons.arrow_right_alt),
-              label: const Text('Start Music'),
-            )
-          ],
-        ),
+          ),
+          Text("Welcome!"),
+          // "This music generation app helps amateurs as well as professional musicians to discover new tunes!"
+          //"Interesting app to help you create your own music. "),
+        ],
       ),
     );
   }

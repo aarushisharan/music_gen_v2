@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "506123554962",
+    "project_id": "emailpasswordauth-12739",
+    "storage_bucket": "emailpasswordauth-12739.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506123554962:android:e7137fd318fa49e3e9d64b",
+        "android_client_info": {
+          "package_name": "com.example.music_gen_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "506123554962-e1og735volphttm0hheqbodsneq5t9hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5qwWu28p3LyaMb9MAMNoG2k12Y5H1JGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "506123554962-e1og735volphttm0hheqbodsneq5t9hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

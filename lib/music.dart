@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:music_gen_app/start_screen.dart';
 import 'package:music_gen_app/input_screen.dart';
 import 'package:music_gen_app/music_screen.dart';
+
+ThemeData themeData = ThemeData(
+  appBarTheme: const AppBarTheme(
+    backgroundColor: Color.fromARGB(255, 197, 138, 138),
+  ),
+  drawerTheme: DrawerThemeData(),
+  scaffoldBackgroundColor: Color.fromARGB(255, 176, 139, 237),
+);
 
 class Music extends StatefulWidget {
   const Music({super.key});
@@ -11,6 +20,9 @@ class Music extends StatefulWidget {
     return _MusicState();
   }
 }
+
+var kColorScheme =
+    ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 177, 139, 237));
 
 class _MusicState extends State<Music> {
   var activeScreen = 'start_screen';
@@ -29,30 +41,7 @@ class _MusicState extends State<Music> {
 
   @override
   Widget build(BuildContext context) {
-    Widget screenWidget = StartScreen(switchScreen);
-
-    if (activeScreen == 'input_screen') {
-      screenWidget = const InputScreen();
-    }
-    if (activeScreen == 'music_screen') {
-      screenWidget = const MusicScreen();
-    }
-
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Welcome!'),
-        ),
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-              Color.fromARGB(255, 234, 193, 13),
-              Color.fromARGB(255, 236, 214, 72),
-            ], begin: Alignment.topLeft, end: Alignment.topRight),
-          ),
-          child: screenWidget,
-        ),
-      ),
-    );
+    return Container();
+    //reenWidget = const MusicScreen();
   }
 }
